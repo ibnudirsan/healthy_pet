@@ -13,6 +13,8 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
+      bottomNavigationBar: const Navigation(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -92,6 +94,68 @@ class HomeScreen extends StatelessWidget {
             ],
           )
         ],
+      ),
+    );
+  }
+}
+
+class Navigation extends StatelessWidget {
+  const Navigation({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 76,
+      clipBehavior: Clip.none,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.03),
+            blurRadius: 30,
+            offset: const Offset(0, -10),
+          )
+        ],
+        borderRadius: const BorderRadius.only(
+          topLeft: Radius.circular(45),
+          topRight: Radius.circular(45),
+        ),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 31),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            IconButton(
+              onPressed: () {},
+              iconSize: 34,
+              color: const Color(0xFF656BB5),
+              icon: const Icon(
+                FeatherIcons.home,
+              ),
+            ),
+            IconButton(
+              onPressed: () {},
+              iconSize: 34,
+              color: const Color(0xFFBFBFBF),
+              icon: const Icon(FeatherIcons.heart),
+            ),
+            IconButton(
+              onPressed: () {},
+              iconSize: 34,
+              color: const Color(0xFFBFBFBF),
+              icon: const Icon(FeatherIcons.messageCircle),
+            ),
+            IconButton(
+              onPressed: () {},
+              iconSize: 34,
+              color: const Color(0xFFBFBFBF),
+              icon: const Icon(FeatherIcons.user),
+            )
+          ],
+        ),
       ),
     );
   }
