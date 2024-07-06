@@ -14,29 +14,31 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          children: [
-            const SizedBox(
-              height: 20,
-            ),
-            _greetings(),
-            const SizedBox(
-              height: 16,
-            ),
-            const CardHeader(),
-            const SizedBox(
-              height: 20,
-            ),
-            const searchBox(),
-            const SizedBox(
-              height: 20,
-            ),
-            ourServices(),
-            const SizedBox(
-              height: 28,
-            ),
-            const doctors_cad()
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              const SizedBox(
+                height: 20,
+              ),
+              _greetings(),
+              const SizedBox(
+                height: 16,
+              ),
+              const CardHeader(),
+              const SizedBox(
+                height: 20,
+              ),
+              const searchBox(),
+              const SizedBox(
+                height: 20,
+              ),
+              ourServices(),
+              const SizedBox(
+                height: 28,
+              ),
+              const doctors_cad()
+            ],
+          ),
         ),
       ),
     );

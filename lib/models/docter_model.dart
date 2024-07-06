@@ -18,5 +18,17 @@ var doctors = [
     image: "dr_stone.jpg",
     services: ["Vaccine", "Surgery"],
     distance: 10,
+  ),
+  DocterModel(
+    name: "Dr. Stone",
+    image: "dr_stone.jpg",
+    services: ["Vaccine", "Surgery"],
+    distance: 10,
+  ),
+  DocterModel(
+    name: "Dr. Stone",
+    image: "dr_stone.jpg",
+    services: ["Vaccine", "Surgery"],
+    distance: 10,
   )
 ];
